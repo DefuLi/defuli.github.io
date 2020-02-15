@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>数学</title>
+  <link rel="shortcut icon" href="res/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="res/layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="res/css/main.css">
+<!--加载meta IE兼容文件-->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+  <div class="header">
+    <div class="menu-btn">
+      <div class="menu"></div>
+    </div>
+    <h1 class="logo">
+      <a href="index.html">
+        <img src="res/img/logo.png">
+      </a>
+    </h1>
+    <div class="nav">
+      <a href="#"  class="active">数 学</a>
+    </div>
+    <ul class="layui-nav header-down-nav">
+      <li class="layui-nav-item"><a href="#"  class="active">数 学</a></li>
+    </ul>
+    <p class="welcome-text">
+      欢迎来到<span class="name">李德福</span>的数学专栏~
+    </p>
+  </div>
+
+  <div class="album-content w1000"  id="layer-photos-demo" class="layer-photos-demo">
+    <div class="img-list">
+      <div class="layui-fluid" style="padding:0">
+        <div class="layui-row layui-col-space30 space">
+          <div class="layui-col-xs12 layui-col-sm4 layui-col-md4">
+            <div class="item">
+              <img src="res/math/math1.jpg">
+              <div class="cont-text">
+                <div class="data"><a href="https://mp.weixin.qq.com/s/lfoDcQVnBdEyIrRAIlzm4g" target="_blank">37%法则 | 详细版PPT</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-xs12 layui-col-sm4 layui-col-md4">
+            <div class="item">
+              <img src="res/math/math2.jpg">
+              <div class="cont-text">
+                <div class="data"><a href="https://mp.weixin.qq.com/s/LCv2EDO9TM7ofVvu4FncTA" target="_blank">37%法则 | 非诚勿扰</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-xs12 layui-col-sm4 layui-col-md4">
+            <div class="item">
+              <img src="res/math/math3.jpg">
+              <div class="cont-text">
+                <div class="data"><a href="https://mp.weixin.qq.com/s/OyLHpISNpdAXGildc3xnqg" target="_blank">囚犯存活(1) | 随机王国</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-xs12 layui-col-sm4 layui-col-md4">
+            <div class="item">
+              <img src="res/math/math4.jpg">
+              <div class="cont-text">
+                <div class="data"><a href="https://mp.weixin.qq.com/s/3rnbW7neR7LcOAMeolT7Qw" target="_blank">囚犯存活(2) | 随机王国</a></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="layui-col-xs12 layui-col-sm4 layui-col-md4">
+            <div class="item">
+              <img src="res/math/math5.jpg">
+              <div class="cont-text">
+                <div class="data"><a href="https://mp.weixin.qq.com/s/DRbqeyl79Q29fmaV3_JUgA" target="_blank">传球游戏 | 数学建模</a></div>
+              </div>
+            </div>
+          </div>  
+
+        </div>
+      </div>
+      <div id="demo"></div>
+    </div>
+  </div>
+
+
+  <div class="footer-wrap">
+    <div class="footer w1000">
+      <div class="qrcode">
+        <img src="res/img/公众号.jpg">
+      </div>
+      <div class="practice-mode">
+        <div class="text">
+          <h4 class="title">欢迎关注我的公众号（斜述视角）</h4>
+          <p>Q Q<span class="WeChat">1105846815</span></p>
+          <p>邮箱<span class="email">defuli.go@qq.com</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="res/layui/layui.js"></script>
+  <script type="text/javascript">
+   layui.config({
+      base: '../res/js/util/'
+    }).use(['element','laypage','form','layer','menu'],function(){
+      element = layui.element,laypage = layui.laypage,form = layui.form,layer = layui.layer,menu = layui.menu;
+      // laypage.render({
+      //   elem: 'demo'
+      //   ,count: 70 //数据总数，从服务端得到
+      // });
+      layer.photos({
+        photos: '#layer-photos-demo'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+        ,tab:function(pic,layero){
+          console.log(pic,layero)
+        }
+      });
+      menu.init(); 
+    })
+  </script>
+</body>
+</html>
